@@ -6,6 +6,8 @@ var chalk = require('chalk');
 var prompts = require('../prompts.json');
 var advancedPrompts = require('../advanced-prompts.json');
 
+var mockPrompts = require('./mock-prompts.js');
+
 function logChoice(prompt, prop) {
   var choice = _.findWhere(prompt.choices, {value: prop});
   this.log('\t*', choice.name);
@@ -18,6 +20,8 @@ module.exports = function (BonAngularGenerator) {
    */
   BonAngularGenerator.prototype.defaultOption = function defaultOption() {
     if (this.options.default) {
+      this.props = _.merge(this.props, mockPrompts.defaults);
+
       this.log('__________________________');
       this.log('You use ' + chalk.green('--default') + ' option:');
 
@@ -79,7 +83,8 @@ module.exports = function (BonAngularGenerator) {
       return props.ui.key === 'bootstrap';
     };
 
-    this.prompt(prompts, function (props) {
+
+    this.prompt(prompts).then(function (props) {
       if (props.ui.key !== 'bootstrap') {
         props.bootstrapComponents = {
           name: null,
@@ -101,6 +106,7 @@ module.exports = function (BonAngularGenerator) {
   BonAngularGenerator.prototype.askAdvancedQuestions = function askAdvancedQuestions() {
     this.includeModernizr = false;
     this.imageMin = false;
+    this.qrCode = false;
 
     if (this.skipConfig || !this.options.advanced) {
       return;
@@ -113,6 +119,7 @@ module.exports = function (BonAngularGenerator) {
 
       this.includeModernizr = this.props.advancedFeatures.indexOf('modernizr') >= 0;
       this.imageMin = this.props.advancedFeatures.indexOf('imagemin') >= 0;
+      this.qrCode = this.props.advancedFeatures.indexOf('qrcode') >= 0;
 
       done();
     }.bind(this));

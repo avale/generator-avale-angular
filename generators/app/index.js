@@ -4,34 +4,16 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 var BonAngularGenerator = class extends Generator {
-  prompting() {
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the swell ' + chalk.red('generator-bon-angular') + ' generator!'
-    ));
+  constructor (args, opts) {
+      super(args, opts);
 
-    const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+      // Define arguments
+      this.argument('appName', {
+        type: String,
+        required: false
+      });
 
-    return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
-      this.props = props;
-    });
-  }
-
-  writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
-  }
-
-  install() {
-    this.installDependencies();
+      this.props = {};
   }
 };
 
@@ -39,5 +21,13 @@ require('./src/options')(BonAngularGenerator);
 require('./src/prompts')(BonAngularGenerator);
 require('./src/paths')(BonAngularGenerator);
 require('./src/files')(BonAngularGenerator);
+
+require('./src/modules')(BonAngularGenerator);
+require('./src/ui')(BonAngularGenerator);
+require('./src/router')(BonAngularGenerator);
+require('./src/preprocessors')(BonAngularGenerator);
+require('./src/bower')(BonAngularGenerator);
+
+require('./src/write')(BonAngularGenerator);
 
 module.exports = BonAngularGenerator;
