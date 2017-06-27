@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Andreas Valegård",
+      "authorEmail": "andreas.valegard@bontouch.com",
+      "authorUrl": ""
+    }
+  }
+}
