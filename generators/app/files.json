@@ -13,7 +13,7 @@
     "gulp/.eslintrc",
     "gulp/e2e-tests.js",
 
-    "src/favicon.ico"
+    "src/favicon.png"
   ],
   "templates": [
     ".gitignore",
