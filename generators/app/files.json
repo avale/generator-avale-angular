@@ -36,6 +36,7 @@
     "gulp/watch.js",
     "gulp/server.js",
     "gulp/unit-tests.js",
+    "gulp/licenses.js",
 
     "src/app/index.module.js",
     "src/app/index.config.js",
