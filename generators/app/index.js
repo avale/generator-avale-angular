@@ -3,7 +3,7 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-module.exports = class extends Generator {
+var BonAngularGenerator = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
@@ -34,3 +34,10 @@ module.exports = class extends Generator {
     this.installDependencies();
   }
 };
+
+require('./src/options')(BonAngularGenerator);
+require('./src/prompts')(BonAngularGenerator);
+require('./src/paths')(BonAngularGenerator);
+require('./src/files')(BonAngularGenerator);
+
+module.exports = BonAngularGenerator;

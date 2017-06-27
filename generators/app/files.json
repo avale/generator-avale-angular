@@ -1,0 +1,48 @@
+{
+  "staticFiles": [
+    ".bowerrc",
+    ".editorconfig",
+
+    "tsconfig.json",
+    "protractor.conf.js",
+
+    "e2e/.eslintrc",
+    "e2e/main.spec.js",
+
+    "gulpfile.js",
+    "gulp/.eslintrc",
+    "gulp/e2e-tests.js",
+
+    "src/favicon.ico"
+  ],
+  "templates": [
+    ".gitignore",
+    ".eslintrc",
+
+    "package.json",
+    "bower.json",
+    "typings.json",
+
+    "karma.conf.js",
+
+    "e2e/main.po.js",
+
+    "gulp/conf.js",
+    "gulp/build.js",
+    "gulp/inject.js",
+    "gulp/markups.js",
+    "gulp/scripts.js",
+    "gulp/styles.js",
+    "gulp/watch.js",
+    "gulp/server.js",
+    "gulp/unit-tests.js",
+
+    "src/app/index.module.js",
+    "src/app/index.config.js",
+    "src/app/index.constants.js",
+    "src/app/index.run.js",
+    "src/index.html",
+    "src/app/main/main.controller.js",
+    "src/app/main/main.controller.spec.js"
+  ]
+}
