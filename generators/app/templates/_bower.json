@@ -54,6 +54,10 @@
     "angular-strap": "~2.3.1",
 <% } if(props.jsPreprocessor.key === 'traceur') { -%>
     "traceur-runtime": "~0.0.90",
+<% } if(props.languageSupport) { -%>
+    "angular-translate": "^2.15.1",
+    "angular-translate-loader-static-files": "^2.15.1",
+    "angular-i18n": "^1.6.4",
 <% } -%>
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",

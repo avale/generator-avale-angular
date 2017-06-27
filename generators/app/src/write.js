@@ -17,7 +17,6 @@ module.exports = function (BonAngularGenerator) {
    * Pass through each files and actually copy them
    */
   BonAngularGenerator.prototype.writeFiles = function writeFiles() {
-      console.log('this', this);
     this.files.forEach(function (file) {
       var dest = utils.replacePrefix(file.dest, this.props.paths);
       try {

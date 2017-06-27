@@ -363,5 +363,11 @@
         "name": "Handlebars (*.hbs)"
       }
     ]
+  },
+  {
+    "type": "confirm",
+    "name": "languageSupport",
+    "message": "Do you want to add support for translations using angular-translate?",
+    "default": true
   }
 ]

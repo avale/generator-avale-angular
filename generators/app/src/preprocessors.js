@@ -75,6 +75,10 @@ module.exports = function (BonAngularGenerator) {
     if (this.props.jsPreprocessor.key !== 'noJsPrepro') {
       rejectWithRegexp.call(this, /^(?!^e2e\/).*spec\.js/);
     }
+
+    if (!this.props.languageSupport) {
+      rejectWithRegexp.call(this, /\/translations\/.*\.json/);
+    }
   };
 
   /**

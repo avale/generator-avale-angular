@@ -64,6 +64,12 @@ module.exports = function (GulpAngularGenerator) {
       };
     }
 
+    if (this.props.languageSupport) {
+      bowerOverrides.moment = {
+          main: ['min/moment-with-locales.min.js']
+      };
+    }
+
     if (_.isEmpty(bowerOverrides)) {
       this.bowerOverrides = null;
     } else {

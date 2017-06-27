@@ -19,6 +19,10 @@ module.exports = function (BonAngularGenerator) {
       this.props.bootstrapComponents.module
     ]);
 
+    if (this.props.languageSupport) {
+        ngModules.push('pascalprecht.translate');
+    }
+
     this.modulesDependencies = ngModules
       .filter(_.isString)
       .map(function (dependency) {
