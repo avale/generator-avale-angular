@@ -35,8 +35,10 @@ gulp.task('inject', ['scripts'], function () {
 <% if (props.jsPreprocessor.srcExtension === 'js' || props.jsPreprocessor.srcExtension === 'coffee') { -%>
     path.join(conf.paths.src, '/app/**/*.module.js'),
     path.join(conf.paths.src, '/app/**/*.js'),
+    path.join(conf.paths.src, '/config/env-' + conf.env + '.js'),
     path.join('!' + conf.paths.src, '/app/**/*.spec.js'),
     path.join('!' + conf.paths.src, '/app/**/*.mock.js'),
+    path.join('!' + conf.paths.src, '/config', '!(env-' + conf.env + ').js'),
 <%   if (props.jsPreprocessor.srcExtension === 'coffee') { -%>
     path.join(conf.paths.tmp, '/serve/app/**/*.module.js'),
     path.join(conf.paths.tmp, '/serve/app/**/*.js'),

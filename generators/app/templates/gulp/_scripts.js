@@ -23,7 +23,11 @@ gulp.task('scripts', function() {
 });
 
 function buildScripts() {
-  return gulp.src(path.join(conf.paths.src, '/app/**/*.<%- props.jsPreprocessor.extension %>'))
+  return gulp.src([
+      path.join(conf.paths.src, '/app/**/*.<%- props.jsPreprocessor.extension %>'),
+      path.join(conf.paths.src, '/config/env-' + conf.env + '.js'),
+      path.join('!' + conf.paths.src, '/config', '!(env-' + conf.env + ').js')
+    ])
 <%   if (props.jsPreprocessor.extension === 'js') { -%>
     .pipe($.eslint())
     .pipe($.eslint.format())

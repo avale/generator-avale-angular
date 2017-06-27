@@ -28,6 +28,7 @@ module.exports = function (BonAngularGenerator) {
   BonAngularGenerator.prototype.determineAppName = function determineAppName() {
     this.appName = this.appName || path.basename(process.cwd());
     this.appName = s.camelize(s.slugify(s.humanize(this.appName)));
+    this.capitalizedAppName = s.capitalize(this.appName);
   };
 
 };

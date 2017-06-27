@@ -44,6 +44,10 @@
     "src/app/index.run.js",
     "src/index.html",
     "src/app/main/main.controller.js",
-    "src/app/main/main.controller.spec.js"
+    "src/app/main/main.controller.spec.js",
+
+    "src/config/env-at.js",
+    "src/config/env-local.js",
+    "src/config/env-prod.js"
   ]
 }
