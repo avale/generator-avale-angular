@@ -261,20 +261,6 @@
       },
       {
         "value": {
-          "key": "less",
-          "extension": "less"
-        },
-        "name": "Less, extends the CSS language, adding features that allow variables, mixins, functions and many other techniques."
-      },
-      {
-        "value": {
-          "key": "stylus",
-          "extension": "styl"
-        },
-        "name": "Stylus, supporting both an indented syntax and regular CSS style."
-      },
-      {
-        "value": {
           "key": "noCssPrepro",
           "extension": "css"
         },

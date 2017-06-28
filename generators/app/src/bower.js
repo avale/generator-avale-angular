@@ -52,10 +52,6 @@ module.exports = function (GulpAngularGenerator) {
       if (this.props.cssPreprocessor.key === 'noCssPrepro') {
         bowerOverrides.bootstrap.main.unshift('dist/css/bootstrap.css');
       }
-
-      if (this.props.cssPreprocessor.key === 'less') {
-        bowerOverrides.bootstrap.main.unshift('less/bootstrap.less');
-      }
     }
 
     if (this.props.router.key === 'new-router') {

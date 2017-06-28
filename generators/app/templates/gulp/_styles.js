@@ -21,15 +21,7 @@ gulp.task('styles', function() {
 });
 
 var buildStyles = function() {
-<% if (props.cssPreprocessor.key === 'less') { -%>
-  var lessOptions = {
-    paths: [
-      'bower_components',
-      path.join(conf.paths.src, '/app')
-    ],
-    relativeUrls : true
-  };
-<% } if (props.cssPreprocessor.extension === 'scss') { -%>
+<% if (props.cssPreprocessor.extension === 'scss') { -%>
   var sassOptions = {
     outputStyle: 'expanded',
     precision: 10
@@ -66,12 +58,8 @@ var buildStyles = function() {
     .pipe($.sourcemaps.init({ loadMaps: true }))
 <% } else { -%>
     .pipe($.sourcemaps.init())
-<% } if (props.cssPreprocessor.key === 'less') { -%>
-    .pipe($.less(lessOptions)).on('error', conf.errorHandler('Less'))
-<% } else if (props.cssPreprocessor.key === 'node-sass') { -%>
+<% } if (props.cssPreprocessor.key === 'node-sass') { -%>
     .pipe($.sass(sassOptions)).on('error', conf.errorHandler('Sass'))
-<% } else if (props.cssPreprocessor.key === 'stylus') { -%>
-    .pipe($.stylus()).on('error', conf.errorHandler('Stylus'))
 <% } -%>
     .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
     .pipe($.sourcemaps.write())

@@ -58,10 +58,6 @@ gulp.task('html', ['inject', 'partials'], function () {
     // .pipe($.sourcemaps.init())
 <% if (props.ui.key === 'bootstrap' && props.cssPreprocessor.extension === 'scss') { -%>
     .pipe($.replace('../<%- computedPaths.appToBower %>/bower_components/bootstrap-sass/assets/fonts/bootstrap/', '../fonts/'))
-<% } else if (props.ui.key === 'bootstrap' && props.cssPreprocessor.extension === 'less') { -%>
-    .pipe($.replace('../<%- computedPaths.appToBower %>/bower_components/bootstrap/fonts/', '../fonts/'))
-<% } else if (props.ui.key === 'bootstrap' && props.cssPreprocessor.extension === 'styl') { -%>
-    .pipe($.replace('../<%- computedPaths.appToBower %>/bower_components/bootstrap-stylus/fonts/', '../fonts/'))
 <% } else if (props.ui.key === 'material-design-lite' || props.ui.key === 'angular-material') { -%>
     .pipe($.replace('../<%- computedPaths.appToBower %>/bower_components/material-design-iconfont/iconfont/', '../fonts/'))
 <% } -%>
@@ -97,9 +93,7 @@ gulp.task('images', function () {
 // Only applies for fonts from bower dependencies
 // Custom fonts are handled by the "other" task
 gulp.task('fonts', function () {
-<% if (props.ui.key === 'bootstrap' && props.cssPreprocessor.extension === 'styl') { -%>
-  return gulp.src($.mainBowerFiles().concat('bower_components/bootstrap-stylus/fonts/*'))
-<% } else if (props.ui.key === 'material-design-lite' || props.ui.key === 'angular-material') { -%>
+<% if (props.ui.key === 'material-design-lite' || props.ui.key === 'angular-material') { -%>
   return gulp.src($.mainBowerFiles().concat('bower_components/material-design-iconfont/iconfont/*'))
 <% } else { -%>
   return gulp.src($.mainBowerFiles())
