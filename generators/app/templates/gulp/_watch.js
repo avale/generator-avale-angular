@@ -19,7 +19,8 @@ gulp.task('watch', [<%- watchTaskDeps.join(', ') %>], function () {
 <% } else { -%>
   gulp.watch([
     path.join(conf.paths.src, '/app/**/*.css'),
-    path.join(conf.paths.src, '/app/**/*.<%- props.cssPreprocessor.extension %>')
+    path.join(conf.paths.src, '/app/**/*.<%- props.cssPreprocessor.extension %>'),
+    path.join(conf.paths.src, '/assets/styles/**/*.<%- props.cssPreprocessor.extension %>')
   ], function(event) {
 <% } -%>
     if(isOnlyChange(event)) {

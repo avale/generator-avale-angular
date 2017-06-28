@@ -16,7 +16,13 @@
     "src/favicon.png",
 
     "src/assets/translations/sv.json",
-    "src/assets/translations/en.json"
+    "src/assets/translations/en.json",
+
+    "src/assets/styles/base.scss",
+    "src/assets/styles/_misc.scss",
+    "src/assets/styles/_mixins.scss",
+    "src/assets/styles/_variables.scss"
+
   ],
   "templates": [
     ".gitignore",

@@ -29,6 +29,9 @@ var buildStyles = function() {
 <% } -%>
 
   var injectFiles = gulp.src([
+<% if (props.cssPreprocessor.extension === 'scss') { -%>
+    path.join(conf.paths.src, '/assets/styles/base.scss'),
+<% } -%>
     path.join(conf.paths.src, '/app/**/*.<%- props.cssPreprocessor.extension %>'),
     path.join('!' + conf.paths.src, '/app/index.<%- props.cssPreprocessor.extension %>')
   ], { read: false });
