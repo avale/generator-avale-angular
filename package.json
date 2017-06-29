@@ -1,6 +1,6 @@
 {
   "name": "generator-bon-angular",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An AngularJS generator for quickly bootstrapping web apps at Bontouch",
   "homepage": "",
   "author": {
