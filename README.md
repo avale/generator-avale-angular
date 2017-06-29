@@ -30,5 +30,5 @@ MIT © [Andreas Valegård]()
 
 [npm-image]: https://badge.fury.io/js/generator-bon-angular.svg
 [npm-url]: https://npmjs.org/package/generator-bon-angular
-[daviddm-image]: https://david-dm.org//generator-bon-angular.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//generator-bon-angular
+[daviddm-image]: https://david-dm.org/avale/generator-bon-angular.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/avale/generator-bon-angular
