@@ -1,4 +1,4 @@
-# generator-bon-angular [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-bon-angular [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > An AngularJS generator for quickly bootstrapping web apps at Bontouch based on [Swiip/generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular/tree/v1.0.0)
 
 ## Installation
