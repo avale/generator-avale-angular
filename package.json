@@ -51,6 +51,9 @@
       "node": true
     }
   },
-  "repository": "/generator-bon-angular",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avale/generator-bon-angular"
+  },
   "license": "MIT"
 }
