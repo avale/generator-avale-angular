@@ -1,5 +1,5 @@
 # generator-bon-angular [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> An AngularJS generator for quickly bootstrapping web apps at Bontouch
+> An AngularJS generator for quickly bootstrapping web apps at Bontouch based on [Swiip/generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular/tree/v1.0.0)
 
 ## Installation
 
@@ -25,12 +25,10 @@ yo bon-angular
 
 ## License
 
-MIT © [Andreas Valegård]()
+MIT © [Andreas Valegård]()
 
 
 [npm-image]: https://badge.fury.io/js/generator-bon-angular.svg
 [npm-url]: https://npmjs.org/package/generator-bon-angular
-[travis-image]: https://travis-ci.org//generator-bon-angular.svg?branch=master
-[travis-url]: https://travis-ci.org//generator-bon-angular
 [daviddm-image]: https://david-dm.org//generator-bon-angular.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org//generator-bon-angular
