@@ -65,7 +65,7 @@ module.exports = function (BonAngularGenerator) {
     }
 
     if (this.props.jsPreprocessor.srcExtension === 'es6' || this.props.jsPreprocessor.key === 'typescript') {
-      rejectWithRegexp.call(this, /index\.constants\.js/);
+      rejectWithRegexp.call(this, /app\.constants\.js/);
     }
 
     if (this.props.htmlPreprocessor.key === 'noHtmlPrepro') {

@@ -34,7 +34,7 @@ function listFiles() {
       path.join(conf.paths.tmp, '/**/*.spec.js'),
       path.join(conf.paths.tmp, '/**/*.mock.js'),
 <% } else { -%>
-      path.join(conf.paths.tmp, '/serve/app/index.module.js'),
+      path.join(conf.paths.tmp, '/serve/app/app.module.js'),
 <% } -%>
     ])
     .concat(pathSrcHtml);

@@ -13,21 +13,21 @@ module.exports = function (BonAngularGenerator) {
       this.routerHtml = '<div ng-view></div>';
       this.files.push({
         src: 'src/app/_ngroute/__ngroute.' + this.props.jsPreprocessor.srcExtension,
-        dest: 'src/app/index.route.' + this.props.jsPreprocessor.extension,
+        dest: 'src/app/app.route.' + this.props.jsPreprocessor.extension,
         template: true
       });
     } else if (this.props.router.key === 'ui-router') {
       this.routerHtml = '<div ui-view></div>';
       this.files.push({
         src: 'src/app/_uirouter/__uirouter.' + this.props.jsPreprocessor.srcExtension,
-        dest: 'src/app/index.route.' + this.props.jsPreprocessor.extension,
+        dest: 'src/app/app.route.' + this.props.jsPreprocessor.extension,
         template: true
       });
     } else if (this.props.router.key === 'new-router') {
       this.routerHtml = '<div ng-viewport ng-controller="RouterController"></div>';
       this.files.push({
         src: 'src/app/_newrouter/__newrouter.' + this.props.jsPreprocessor.srcExtension,
-        dest: 'src/app/index.route.' + this.props.jsPreprocessor.extension,
+        dest: 'src/app/app.route.' + this.props.jsPreprocessor.extension,
         template: true
       });
     } else {

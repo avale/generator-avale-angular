@@ -21,7 +21,7 @@ var pathSrcJs = [
 <% } else if (props.jsPreprocessor.key === 'coffee') { -%>
   path.join(conf.paths.tmp, '/**/!(*.spec).js')
 <% } else { -%>
-  path.join(conf.paths.tmp, '/serve/app/index.module.js')
+  path.join(conf.paths.tmp, '/serve/app/app.module.js')
 <% } -%>
 ];
 

@@ -16,8 +16,8 @@ module.exports = function (BonAngularGenerator) {
     }
 
     this.files.push({
-      src: 'src/app/_' + this.props.ui.key + '/__' + this.props.ui.key + '-index.' + this.props.cssPreprocessor.extension,
-      dest: 'src/app/index.' + this.props.cssPreprocessor.extension,
+      src: 'src/app/_' + this.props.ui.key + '/__' + this.props.ui.key + '-app.' + this.props.cssPreprocessor.extension,
+      dest: 'src/app/app.' + this.props.cssPreprocessor.extension,
       template: true
     });
   };

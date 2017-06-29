@@ -1,17 +1,17 @@
 /// <reference path="../../typings/main.d.ts" />
 
 <% if (props.languageSupport) { -%>
-import { config, configTranslations } from './index.config';
+import { config, configTranslations } from './app.config';
 <% } else { -%>
-import { config } from './index.config';
+import { config } from './app.config';
 <% } -%>
 
 <% if (props.router.key === 'new-router') { -%>
-import { routerConfig, RouterController } from './index.route';
+import { routerConfig, RouterController } from './app.route';
 <% } else if (props.router.key !== 'noRouter') { -%>
-import { routerConfig } from './index.route';
+import { routerConfig } from './app.route';
 <% } -%>
-import { runBlock } from './index.run';
+import { runBlock } from './app.run';
 import { MainController } from './main/main.controller';
 
 declare var moment: moment.MomentStatic;

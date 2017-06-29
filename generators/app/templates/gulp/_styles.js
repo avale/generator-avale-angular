@@ -33,7 +33,7 @@ var buildStyles = function() {
     path.join(conf.paths.src, '/assets/styles/base.scss'),
 <% } -%>
     path.join(conf.paths.src, '/app/**/*.<%- props.cssPreprocessor.extension %>'),
-    path.join('!' + conf.paths.src, '/app/index.<%- props.cssPreprocessor.extension %>')
+    path.join('!' + conf.paths.src, '/app/app.<%- props.cssPreprocessor.extension %>')
   ], { read: false });
 
   var injectOptions = {
@@ -51,7 +51,7 @@ var buildStyles = function() {
 <% } -%>
 
   return gulp.src([
-    path.join(conf.paths.src, '/app/index.<%- props.cssPreprocessor.extension %>')
+    path.join(conf.paths.src, '/app/app.<%- props.cssPreprocessor.extension %>')
   ])
     .pipe($.inject(injectFiles, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))

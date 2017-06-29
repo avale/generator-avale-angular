@@ -64,7 +64,7 @@ function webpackWrapper(watch, test, callback) {
       loaders: [{ test: /\.ts$/, exclude: /node_modules/, loaders: ['ng-annotate', 'ts-loader']}]
 <%   } -%>
     },
-    output: { filename: 'index.module.js' }
+    output: { filename: 'app.module.js' }
   };
 
   if(watch) {
@@ -88,7 +88,7 @@ function webpackWrapper(watch, test, callback) {
     }
   };
 
-  var sources = [ path.join(conf.paths.src, '/app/index.module.<%- props.jsPreprocessor.extension %>') ];
+  var sources = [ path.join(conf.paths.src, '/app/app.module.<%- props.jsPreprocessor.extension %>') ];
   if (test) {
     sources.push(path.join(conf.paths.src, '/app/**/*.spec.<%- props.jsPreprocessor.extension %>'));
   }
