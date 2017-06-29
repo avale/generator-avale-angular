@@ -49,7 +49,7 @@ Running the command above will generate the following directory structure:
 |   |   |
 │   │   ├──  translations/
 │   │   │   ├──  en.json
-│   │   │   ├──  sv.json
+│   │   │   └──  sv.json
 |   |   |
 │   │   └──  images/
 |   |
