@@ -8,12 +8,12 @@ function rejectWithRegexp(regexp) {
   });
 }
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * List files extension processed by the generator
    */
-  BonAngularGenerator.prototype.computeProcessedFileExtension = function computeProcessedFileExtension() {
+  AvaleAngularGenerator.prototype.computeProcessedFileExtension = function computeProcessedFileExtension() {
     this.processedFileExtension = [
       'html',
       'css',
@@ -35,7 +35,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Compute gulp inject task dependencies depending on js and css preprocessors
    */
-  BonAngularGenerator.prototype.computeWatchTaskDeps = function computeInjectTaskDeps() {
+  AvaleAngularGenerator.prototype.computeWatchTaskDeps = function computeInjectTaskDeps() {
     this.watchTaskDeps = [];
 
     if (this.props.jsPreprocessor.srcExtension === 'es6' || this.props.jsPreprocessor.srcExtension === 'ts') {
@@ -54,7 +54,7 @@ module.exports = function (BonAngularGenerator) {
    * Some important files are listed in the files.json even if they are not needed
    * depending on options. This step reject these files.
    */
-  BonAngularGenerator.prototype.rejectFiles = function rejectFiles() {
+  AvaleAngularGenerator.prototype.rejectFiles = function rejectFiles() {
     if (this.props.cssPreprocessor.key === 'noCssPrepro') {
       rejectWithRegexp.call(this, /styles\.js/);
     }
@@ -84,7 +84,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Copy additional lint files if needed
    */
-  BonAngularGenerator.prototype.lintCopies = function lintCopies() {
+  AvaleAngularGenerator.prototype.lintCopies = function lintCopies() {
     if (this.props.jsPreprocessor.key === 'coffee') {
       this.files.push({
         src: 'coffeelint.json',

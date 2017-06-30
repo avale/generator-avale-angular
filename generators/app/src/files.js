@@ -35,13 +35,13 @@ function resolvePaths(template) {
   };
 }
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Prepare all files from files.json and add them to `this.files` as
    * copy description object
    */
-  BonAngularGenerator.prototype.prepareFiles = function prepareFiles() {
+  AvaleAngularGenerator.prototype.prepareFiles = function prepareFiles() {
 
     this.files = []
       .concat(files.staticFiles.map(resolvePaths(false), this))

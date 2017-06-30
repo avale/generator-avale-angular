@@ -13,12 +13,12 @@ function logChoice(prompt, prop) {
   this.log('\t*', choice.name);
 }
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Check if the default option is set, if it is, use defaults props and log them
    */
-  BonAngularGenerator.prototype.defaultOption = function defaultOption() {
+  AvaleAngularGenerator.prototype.defaultOption = function defaultOption() {
     if (this.options.default) {
       this.props = _.merge(this.props, mockPrompts.defaults);
 
@@ -43,7 +43,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Check if there is a .yo-rc.json and ask for using it
    */
-  BonAngularGenerator.prototype.checkYoRc = function checkYoRc() {
+  AvaleAngularGenerator.prototype.checkYoRc = function checkYoRc() {
     var done = this.async();
 
     if (this.config.get('props') && !this.options.default) {
@@ -72,7 +72,7 @@ module.exports = function (BonAngularGenerator) {
    * Add conditional tests on those depending on first responses
    * Complete responses with null answers for questions not asked
    */
-  BonAngularGenerator.prototype.askQuestions = function askQuestions() {
+  AvaleAngularGenerator.prototype.askQuestions = function askQuestions() {
     if (this.skipConfig || this.options.default) {
       return;
     }
@@ -103,7 +103,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * If the option is set, ask for advanced questions
    */
-  BonAngularGenerator.prototype.askAdvancedQuestions = function askAdvancedQuestions() {
+  AvaleAngularGenerator.prototype.askAdvancedQuestions = function askAdvancedQuestions() {
     this.includeModernizr = false;
     this.imageMin = false;
     this.qrCode = false;

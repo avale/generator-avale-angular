@@ -2,12 +2,12 @@
 
 var _ = require('lodash');
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Compute Angular's module to load and format the dependency list to insert
    */
-  BonAngularGenerator.prototype.computeModules = function computeModules() {
+  AvaleAngularGenerator.prototype.computeModules = function computeModules() {
     var ngModules = this.props.angularModules.map(function (module) {
       return module.module;
     });
@@ -34,7 +34,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Simplify the model to simplify access to angular modules from the templates
    */
-  BonAngularGenerator.prototype.prepareAngularModules = function prepareAngularModules() {
+  AvaleAngularGenerator.prototype.prepareAngularModules = function prepareAngularModules() {
     this.angularModulesObject = {};
 
     this.props.angularModules.forEach(function (module) {

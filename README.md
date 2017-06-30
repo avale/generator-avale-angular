@@ -1,22 +1,22 @@
-# generator-bon-angular [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Yeoman generator for quickly bootstrapping AngularJS apps at Bontouch, based on [Swiip/generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular/tree/v1.0.0)
+# generator-avale-angular [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+> Yeoman generator for quickly scaffolding AngularJS apps, based on [Swiip/generator-gulp-angular](https://github.com/Swiip/generator-gulp-angular/tree/v1.0.0)
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-bon-angular using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-avale-angular using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-bon-angular
+npm install -g generator-avale-angular
 ```
 
 Then generate your new project:
 
 ```bash
-yo bon-angular
+yo avale-angular
 ```
 ## Yo options
-`yo gulp-angular --help` or `yo gulp-angular -h` for help. All options are not required. If not provided, default values will be used.
+`yo avale-angular --help` or `yo avale-angular -h` for help. All options are not required. If not provided, default values will be used.
 
 * `--app-path='src'` customize Angular's app folder, relative to cwd, default is `src`
 * `--dist-path='dist'` customize build target folder, relative to cwd, default is `dist`
@@ -104,10 +104,10 @@ Running the command above will generate the following directory structure:
 
 ## License
 
-MIT © [Andreas Valegård](http://bontouch.com)
+MIT © [Andreas Valegård](http://avale.se)
 
 
-[npm-image]: https://badge.fury.io/js/generator-bon-angular.svg
-[npm-url]: https://npmjs.org/package/generator-bon-angular
-[daviddm-image]: https://david-dm.org/avale/generator-bon-angular.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/avale/generator-bon-angular
+[npm-image]: https://badge.fury.io/js/generator-avale-angular.svg
+[npm-url]: https://npmjs.org/package/generator-avale-angular
+[daviddm-image]: https://david-dm.org/avale/generator-avale-angular.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/avale/generator-avale-angular

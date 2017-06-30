@@ -1,12 +1,12 @@
 'use strict';
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Add files of the navbar and the main view depending on the ui framework
    * and the css preprocessor
    */
-  BonAngularGenerator.prototype.uiFiles = function uiFiles() {
+  AvaleAngularGenerator.prototype.uiFiles = function uiFiles() {
     if (this.props.router.module !== null) {
       this.files.push({
         src: 'src/app/main/__' + this.props.ui.key + '.html',

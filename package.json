@@ -1,7 +1,7 @@
 {
-  "name": "generator-bon-angular",
+  "name": "generator-avale-angular",
   "version": "0.0.3",
-  "description": "An AngularJS generator for quickly bootstrapping web apps at Bontouch",
+  "description": "An AngularJS generator for quickly bootstrapping web apps",
   "homepage": "",
   "author": {
     "name": "Andreas Valegård",
@@ -13,8 +13,6 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "Bon",
-    "Bontouch",
     "AngularJS",
     "Gulp",
     "yeoman-generator"
@@ -53,7 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avale/generator-bon-angular"
+    "url": "git+https://github.com/avale/generator-avale-angular"
   },
   "license": "MIT"
 }

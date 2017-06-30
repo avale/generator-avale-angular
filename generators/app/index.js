@@ -3,7 +3,7 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-var BonAngularGenerator = class extends Generator {
+var AvaleAngularGenerator = class extends Generator {
   constructor (args, opts) {
       super(args, opts);
 
@@ -17,17 +17,17 @@ var BonAngularGenerator = class extends Generator {
   }
 };
 
-require('./src/options')(BonAngularGenerator);
-require('./src/prompts')(BonAngularGenerator);
-require('./src/paths')(BonAngularGenerator);
-require('./src/files')(BonAngularGenerator);
+require('./src/options')(AvaleAngularGenerator);
+require('./src/prompts')(AvaleAngularGenerator);
+require('./src/paths')(AvaleAngularGenerator);
+require('./src/files')(AvaleAngularGenerator);
 
-require('./src/modules')(BonAngularGenerator);
-require('./src/ui')(BonAngularGenerator);
-require('./src/router')(BonAngularGenerator);
-require('./src/preprocessors')(BonAngularGenerator);
-require('./src/bower')(BonAngularGenerator);
+require('./src/modules')(AvaleAngularGenerator);
+require('./src/ui')(AvaleAngularGenerator);
+require('./src/router')(AvaleAngularGenerator);
+require('./src/preprocessors')(AvaleAngularGenerator);
+require('./src/bower')(AvaleAngularGenerator);
 
-require('./src/write')(BonAngularGenerator);
+require('./src/write')(AvaleAngularGenerator);
 
-module.exports = BonAngularGenerator;
+module.exports = AvaleAngularGenerator;

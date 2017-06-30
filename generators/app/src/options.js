@@ -6,12 +6,12 @@ var s = require('underscore.string');
 
 var options = require('../options.json');
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Declares options in the generator (only used for the help messages)
    */
-  BonAngularGenerator.prototype.defineOptions = function defineOptions() {
+  AvaleAngularGenerator.prototype.defineOptions = function defineOptions() {
     options.forEach(function (option) {
       this.option(option.name, {
         type: global[option.type],
@@ -25,7 +25,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Determine the appName either from the current directory or the parameter of the generator
    */
-  BonAngularGenerator.prototype.determineAppName = function determineAppName() {
+  AvaleAngularGenerator.prototype.determineAppName = function determineAppName() {
     this.appName = this.appName || path.basename(process.cwd());
     this.appName = s.camelize(s.slugify(s.humanize(this.appName)));
     this.capitalizedAppName = s.capitalize(this.appName);

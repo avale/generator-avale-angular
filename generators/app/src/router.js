@@ -1,12 +1,12 @@
 'use strict';
 
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Configure routing by defining what to add in the index.html and what in the app.js
    */
-  BonAngularGenerator.prototype.computeRouter = function computeRouter() {
+  AvaleAngularGenerator.prototype.computeRouter = function computeRouter() {
     var routerPartialSrc = 'src/app/main/__' + this.props.ui.key + '.html';
 
     if (this.props.router.key === 'angular-route') {

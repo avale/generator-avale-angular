@@ -7,12 +7,12 @@ var utils = require('./utils.js');
 
 var pathOptions = ['app-path', 'dist-path', 'e2e-path', 'tmp-path'];
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Check paths options to refuse absolutes ones and normalize them
    */
-  BonAngularGenerator.prototype.checkPaths = function checkPaths() {
+  AvaleAngularGenerator.prototype.checkPaths = function checkPaths() {
     pathOptions.forEach(function (name) {
       if (utils.isAbsolutePath(this.options[name])) {
         this.env.error(name + ' must be a relative path');
@@ -24,7 +24,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Create the paths object from options and add them to props
    */
-  BonAngularGenerator.prototype.storePaths = function storePaths() {
+  AvaleAngularGenerator.prototype.storePaths = function storePaths() {
     this.props = _.merge(this.props, {
       paths: {
         src: this.options['app-path'],
@@ -38,7 +38,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Compute paths deductible from the first ones
    */
-  BonAngularGenerator.prototype.computePaths = function computePaths() {
+  AvaleAngularGenerator.prototype.computePaths = function computePaths() {
     this.computedPaths = {
       appToBower: path.relative(this.props.paths.src, '')
     };

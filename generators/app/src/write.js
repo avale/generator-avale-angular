@@ -3,12 +3,12 @@
 var chalk = require('chalk');
 var utils = require('./utils');
 
-module.exports = function (BonAngularGenerator) {
+module.exports = function (AvaleAngularGenerator) {
 
   /**
    * Write computed props in the .yo-rc.json
    */
-  BonAngularGenerator.prototype.writeYoRc = function writeYoRc() {
+  AvaleAngularGenerator.prototype.writeYoRc = function writeYoRc() {
     this.config.set('version', this.version);
     this.config.set('props', this.props);
   };
@@ -16,7 +16,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Pass through each files and actually copy them
    */
-  BonAngularGenerator.prototype.writeFiles = function writeFiles() {
+  AvaleAngularGenerator.prototype.writeFiles = function writeFiles() {
     this.files.forEach(function (file) {
       var dest = utils.replacePrefix(file.dest, this.props.paths);
       try {
@@ -35,7 +35,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * Launch npm and bower installs unless they are skipped
    */
-  BonAngularGenerator.prototype.install = function install() {
+  AvaleAngularGenerator.prototype.install = function install() {
 
     this.installDependencies({
       skipInstall: this.options['skip-install'],
@@ -50,7 +50,7 @@ module.exports = function (BonAngularGenerator) {
   /**
    * End message
    */
-  BonAngularGenerator.prototype.end = function end() {
+  AvaleAngularGenerator.prototype.end = function end() {
 
     this.log('It\'s time to use Gulp tasks:');
     this.log('- `$ ' + chalk.yellow.bold('gulp') + '` to build an optimized version of your application in folder ' + this.props.paths.dist);

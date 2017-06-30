@@ -1,6 +1,6 @@
 'use strict';
 
-var paths = require('./.yo-rc.json')['generator-bon-angular'].props.paths;
+var paths = require('./.yo-rc.json')['generator-avale-angular'].props.paths;
 
 // An example configuration file.
 exports.config = {
